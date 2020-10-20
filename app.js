@@ -68,6 +68,7 @@ app.post('/signup', (req,res) => {
 app.post('/get_accessToken', (req,res) => {
   // refresh the damn token
   const postData = req.body
+
   // if refresh token exists
   if((postData.refreshToken) && (postData.refreshToken in tokenList)) {
       const user = {
@@ -80,7 +81,8 @@ app.post('/get_accessToken', (req,res) => {
       }
       // update the token in the list
       tokenList[postData.refreshToken].accessToken = accessToken
-      res.status(200).json(response);        
+      res.status(200).json(response);       
+       
   } else {
       res.status(404).send('refresh token is not valid anymore')
   }
