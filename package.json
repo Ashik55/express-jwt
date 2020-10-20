@@ -1,0 +1,25 @@
+{
+  "name": "express-jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashik55/express-jwt.git"
+  },
+  "author": "aashiq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashik55/express-jwt/issues"
+  },
+  "homepage": "https://github.com/Ashik55/express-jwt#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "nodemon": "^2.0.2"
+  }
+}

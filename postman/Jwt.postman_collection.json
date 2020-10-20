@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "01c098d3-64a8-4d09-9244-cbd388766fd0",
+		"name": "Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ashik@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Aashiq",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.102:8000/signup",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"102"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ashik@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Aashiq",
+							"type": "text"
+						},
+						{
+							"key": "refreshToken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaGlrQGdtYWlsLmNvbSIsIm5hbWUiOiJBYXNoaXEiLCJpYXQiOjE2MDMxNzY3NzEsImV4cCI6MTYwODM2MDc3MX0.DsWOldVgQpGtaKEM8vE-sZ5fuWJAHrASubei-TJF1Ao",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.102:8000/get_accessToken",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"102"
+					],
+					"port": "8000",
+					"path": [
+						"get_accessToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access Secure End Point",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaGlrQGdtYWlsLmNvbSIsIm5hbWUiOiJBYXNoaXEiLCJpYXQiOjE2MDMxNzY3OTQsImV4cCI6MTYwMzE3NzY5NH0.sP2pfY84GMMitbSKEHPX69nNrLiVYAPBXXznJDH0lTk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://192.168.1.102:8000/test",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"102"
+					],
+					"port": "8000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
