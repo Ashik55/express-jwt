@@ -27,6 +27,9 @@ let checkToken = (req, res, next) => {
       message: 'Auth token is not supplied'
     });
   }
+
+
+  
 };
 
 module.exports = {
